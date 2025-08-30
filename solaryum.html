@@ -1,39 +1,42 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Solaryum Fiyat Listesi</title>
 
+  <!-- Font (sadece eklendi) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    body { margin:0; font-family:'Urbanist',system-ui,-apple-system,Segoe UI,Roboto,sans-serif; }
+    :root { color-scheme: light dark; }
+    body { font-family: 'Urbanist', system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 16px; }
+    .wrap { max-width: 720px; margin: 0 auto; }
+    img { width: 100%; height: auto; border-radius: 12px; display:block; }
+    .row { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 12px; }
+
+    /* BUTON STİLİ (sadece burası değişti) */
     .btn{
-      display:block; width:100%;
-      text-align:center; text-decoration:none; cursor:pointer;
-      padding:14px 16px; border-radius:16px; font-weight:600; letter-spacing:.2px;
-      color:#fff;
+      display:block; padding:14px 16px; text-align:center; text-decoration:none;
+      border-radius:12px; border:1px solid #e9c6c1aa; cursor:pointer;
+      font-weight:600; letter-spacing:.2px; color:#fff;
       background:
         radial-gradient(120% 180% at 80% 0%, #ffffff55 0 25%, #0000 40%),
         linear-gradient(160deg, #e6b8b3, #d39a95);
-      border:1px solid #e9c6c1aa;
       box-shadow: 0 12px 28px rgba(211,154,149,.35), 0 3px 8px rgba(0,0,0,.06), inset 0 1px 0 #fff6;
       transition: transform .15s ease, box-shadow .15s ease;
     }
-    .btn:hover{ transform: translateY(-1px) scale(1.01) }
-    .btn:active{ transform: translateY(1px) }
-    .btn:focus-visible{ outline:3px solid rgba(200,162,126,.55); outline-offset:2px }
-
-    .row{ display:grid; grid-template-columns:1fr; gap:10px; margin-top:12px; }
-    img{ max-width:100%; height:auto; display:block; border-radius:12px }
-    .wrap{ max-width:760px; margin:0 auto; padding:16px 16px 28px; }
+    .btn:hover{ transform: translateY(-1px) scale(1.01); }
+    .btn:active{ transform: translateY(1px); }
+    .btn:focus-visible{ outline:3px solid rgba(200,162,126,.55); outline-offset:2px; }
   </style>
-
   <script>
-    function goBack(){ if(history.length>1) history.back(); else location.href="index.html"; }
+    function goBack() {
+      if (history.length > 1) history.back();
+      else window.location.href = "index.html";
+    }
   </script>
 </head>
 <body>
