@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erkek Fiyat Listesi</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; padding: 16px; }
+    .wrap { max-width: 720px; margin: 0 auto; }
+    img { width: 100%; height: auto; border-radius: 12px; display:block; }
+    .row { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 12px; }
+    .btn { display:block; padding:14px 16px; text-align:center; text-decoration:none; border:1px solid #ddd; border-radius:12px; }
+  </style>
+  <script>
+    function goBack() {
+      if (history.length > 1) history.back();
+      else window.location.href = "index.html";
+    }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <img src="img/erkek.png" alt="Erkek Fiyat Listesi">
+    <div class="row">
+      <a class="btn" href="https://www.instagram.com/lujubeautysolarium/" target="_blank" rel="noopener">Instagram’a Git</a>
+      <button class="btn" onclick="goBack()">Geri Gel</button>
+    </div>
+  </div>
+</body>
+</html>
